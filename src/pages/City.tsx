@@ -1,17 +1,18 @@
 import React from "react";
 // Icons
 import { WiStrongWind } from "react-icons/wi";
-// import { IoArrowUpSharp } from "react-icons/io5";
 import { WiHumidity } from "react-icons/wi";
+// Hooks
 import { useCurrentWeather, useWeatherForecast } from "../hooks/useGetWeather";
 import { useAddCities } from "../hooks/useAddCities";
-import { useParams } from "react-router";
-import CityFutureForcast from "../UI/CityFutureForcast";
+import { useNavigate, useParams } from "react-router";
 import { formatTemp } from "../hooks/useFormatTemp";
-import OpenSearch from "../UI/OpenSearch";
+import CityFutureForcast from "../UI/CityFutureForcast";
+import Spinner from "../UI/Spinner";
 
 const CityDetail: React.FC = () => {
   const { city } = useParams<{ city: string }>();
+  const navigate = useNavigate();
   const {
     data: currentWeather,
     isLoading: loadingWeather,
@@ -22,25 +23,22 @@ const CityDetail: React.FC = () => {
     isLoading: loadingForecast,
     isError: errorForecast,
   } = useWeatherForecast(city || "");
-  const { addCityToDashboard: addCity } = useAddCities();
-  // const navigate = useNavigate();
+  const { addCity } = useAddCities();
+  function handleAddCity() {
+    if (!city) return;
+    addCity(city || "");
+    navigate("/dashboard");
+  }
 
-  const handleAddCity = () => {
-    if (city && currentWeather) {
-      console.log(city, currentWeather);
-      addCity(city);
-    }
-  };
-
-  if (loadingWeather || loadingForecast) return <div>Loading...</div>;
+  if (loadingWeather || loadingForecast) return <Spinner />;
   if (errorWeather || errorForecast)
     return <div>Error fetching data for {city}</div>;
+  console.log(currentWeather);
 
   return (
     <div className="p-6">
-      <OpenSearch />
-      <div className="max-w-6xl mx-auto dark:bg-zinc-900 py-8 px-12 rounded-lg shadow dark:shadow-indigo-900/50 dark:text-gray-200">
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+      <div className="lg:max-w-6xl mx-auto bg-gray-200 dark:bg-zinc-900 py-8 px-12 rounded-lg shadow dark:shadow-indigo-900/50 dark:text-gray-200">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
             <h2 className="text-7xl font-bold mb-4">{city}</h2>
             <h3 className="text-xl font-semibold">Current Weather:</h3>
@@ -76,7 +74,7 @@ const CityDetail: React.FC = () => {
               onClick={handleAddCity}
               className="mt-6 bg-indigo-700 hover:bg-indigo-800 text-white py-2 px-4 rounded-md cursor-pointer"
             >
-              Add {city} to Dashboard
+              <span>Add {city} to Dashboard</span>
             </button>
           </div>
           <div>

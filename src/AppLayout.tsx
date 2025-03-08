@@ -2,6 +2,7 @@
 import { Outlet } from "react-router";
 import Header from "./UI/Header";
 import Modal from "./context/ModalContext";
+import OpenSearch from "./UI/OpenSearch";
 const AppLayout = () => {
   return (
     <div className="bg-gradient-to-r from-background to-muted bg-gray-300 dark:bg-zinc-800">
@@ -9,6 +10,7 @@ const AppLayout = () => {
         <Header />
         <main className="min-h-screen container mx-auto px-4 py-8 mt-8">
           <Outlet />
+          <OpenSearch />
         </main>
         <footer className="backdrop-blur py-4 supports-[backdrop-filter]::bg-background/60 shadow shadow-indigo-900/50">
           <div className="container mx-auto px-4 text-center text-gray-600 dark:text-gray-200 py-4">

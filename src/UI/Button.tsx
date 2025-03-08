@@ -1,13 +1,4 @@
-import { ReactNode } from "react";
-
-interface ButtonData {
-  type?: string;
-  children?: ReactNode;
-  onClick?: () => void;
-  disabled?: boolean;
-  icon?: ReactNode;
-  className?: string;
-}
+import { ButtonData } from "../utils/UITypes";
 
 // prettier-ignore
 function Button({ type, children, onClick, disabled, icon, className }: ButtonData) {

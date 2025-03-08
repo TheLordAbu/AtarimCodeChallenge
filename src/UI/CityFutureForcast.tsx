@@ -1,4 +1,4 @@
-import { format, parse } from "date-fns";
+import { format } from "date-fns";
 import { formatTemp } from "../hooks/useFormatTemp";
 import { GoArrowUp } from "react-icons/go";
 import { GoArrowDown } from "react-icons/go";
@@ -7,10 +7,8 @@ import { HiOutlineMoon } from "react-icons/hi2";
 function CityFutureForcast(day: any) {
   const { astro } = day;
   const curDay = day.day;
-  // console.log(day);
-  console.log(astro);
   return (
-    <li className="p-4 mb-4 shadow rounded dark:shadow-indigo-700/40 dark:bg-zinc-800">
+    <li className="p-4 mb-4 bg-gray-100 shadow rounded dark:shadow-indigo-700/40 dark:bg-zinc-800">
       <div className="flex items-center justify-between">
         <div className="flex flex-col">
           <p className="font-bold text-2xl mb-2">
