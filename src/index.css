@@ -17,9 +17,11 @@ span:not(button span) {
 .dark h2,
 .dark h3,
 .dark h4,
-.dark p,
-.dark span {
+.dark p {
   color: #f3f4f6;
+}
+.dark footer p {
+  color: #ababab72;
 }
 svg {
   color: #372aac;

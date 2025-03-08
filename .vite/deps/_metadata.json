@@ -1,0 +1,157 @@
+{
+  "hash": "3e89b910",
+  "configHash": "c057744b",
+  "lockfileHash": "69eb29c4",
+  "browserHash": "be76f184",
+  "optimized": {
+    "react/jsx-dev-runtime": {
+      "src": "../../node_modules/react/jsx-dev-runtime.js",
+      "file": "react_jsx-dev-runtime.js",
+      "fileHash": "87e5f738",
+      "needsInterop": true
+    },
+    "react": {
+      "src": "../../node_modules/react/index.js",
+      "file": "react.js",
+      "fileHash": "e9874273",
+      "needsInterop": true
+    },
+    "react-dom/client": {
+      "src": "../../node_modules/react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "ef8342f9",
+      "needsInterop": true
+    },
+    "react-redux": {
+      "src": "../../node_modules/react-redux/dist/react-redux.mjs",
+      "file": "react-redux.js",
+      "fileHash": "14396de6",
+      "needsInterop": false
+    },
+    "date-fns": {
+      "src": "../../node_modules/date-fns/index.js",
+      "file": "date-fns.js",
+      "fileHash": "333f917c",
+      "needsInterop": false
+    },
+    "react-icons/go": {
+      "src": "../../node_modules/react-icons/go/index.mjs",
+      "file": "react-icons_go.js",
+      "fileHash": "378a75ec",
+      "needsInterop": false
+    },
+    "react-icons/io5": {
+      "src": "../../node_modules/react-icons/io5/index.mjs",
+      "file": "react-icons_io5.js",
+      "fileHash": "a6e67530",
+      "needsInterop": false
+    },
+    "react-icons/hi2": {
+      "src": "../../node_modules/react-icons/hi2/index.mjs",
+      "file": "react-icons_hi2.js",
+      "fileHash": "9f391715",
+      "needsInterop": false
+    },
+    "react-icons/md": {
+      "src": "../../node_modules/react-icons/md/index.mjs",
+      "file": "react-icons_md.js",
+      "fileHash": "1dab351b",
+      "needsInterop": false
+    },
+    "react-router": {
+      "src": "../../node_modules/react-router/dist/development/index.mjs",
+      "file": "react-router.js",
+      "fileHash": "908ef071",
+      "needsInterop": false
+    },
+    "@tanstack/react-query": {
+      "src": "../../node_modules/@tanstack/react-query/build/modern/index.js",
+      "file": "@tanstack_react-query.js",
+      "fileHash": "fc1a223b",
+      "needsInterop": false
+    },
+    "@tanstack/react-query-devtools": {
+      "src": "../../node_modules/@tanstack/react-query-devtools/build/modern/index.js",
+      "file": "@tanstack_react-query-devtools.js",
+      "fileHash": "da85593d",
+      "needsInterop": false
+    },
+    "react-hot-toast": {
+      "src": "../../node_modules/react-hot-toast/dist/index.mjs",
+      "file": "react-hot-toast.js",
+      "fileHash": "1d987152",
+      "needsInterop": false
+    },
+    "@reduxjs/toolkit": {
+      "src": "../../node_modules/@reduxjs/toolkit/dist/redux-toolkit.modern.mjs",
+      "file": "@reduxjs_toolkit.js",
+      "fileHash": "c12b71cb",
+      "needsInterop": false
+    },
+    "react-icons/wi": {
+      "src": "../../node_modules/react-icons/wi/index.mjs",
+      "file": "react-icons_wi.js",
+      "fileHash": "72332d52",
+      "needsInterop": false
+    },
+    "react-dom": {
+      "src": "../../node_modules/react-dom/index.js",
+      "file": "react-dom.js",
+      "fileHash": "6caf7735",
+      "needsInterop": true
+    },
+    "country-list": {
+      "src": "../../node_modules/country-list/country-list.js",
+      "file": "country-list.js",
+      "fileHash": "d1651fa6",
+      "needsInterop": true
+    },
+    "react-error-boundary": {
+      "src": "../../node_modules/react-error-boundary/dist/react-error-boundary.development.esm.js",
+      "file": "react-error-boundary.js",
+      "fileHash": "9cfce813",
+      "needsInterop": false
+    },
+    "react-icons/fi": {
+      "src": "../../node_modules/react-icons/fi/index.mjs",
+      "file": "react-icons_fi.js",
+      "fileHash": "abdd8bd9",
+      "needsInterop": false
+    },
+    "react-icons/ti": {
+      "src": "../../node_modules/react-icons/ti/index.mjs",
+      "file": "react-icons_ti.js",
+      "fileHash": "b1d83664",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "VONRGPZ6-AJ6FUOKQ": {
+      "file": "VONRGPZ6-AJ6FUOKQ.js"
+    },
+    "2QQPFIXG-MN7XE36J": {
+      "file": "2QQPFIXG-MN7XE36J.js"
+    },
+    "chunk-D3WHKGNC": {
+      "file": "chunk-D3WHKGNC.js"
+    },
+    "chunk-CXYAJK5W": {
+      "file": "chunk-CXYAJK5W.js"
+    },
+    "chunk-L7NXSFNJ": {
+      "file": "chunk-L7NXSFNJ.js"
+    },
+    "chunk-AU7NFZFN": {
+      "file": "chunk-AU7NFZFN.js"
+    },
+    "chunk-KWFIT3EM": {
+      "file": "chunk-KWFIT3EM.js"
+    },
+    "chunk-W5LHGKIZ": {
+      "file": "chunk-W5LHGKIZ.js"
+    },
+    "chunk-QWN5BXRD": {
+      "file": "chunk-QWN5BXRD.js"
+    }
+  }
+}
