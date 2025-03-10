@@ -9,13 +9,13 @@ import ErrorFallback from "./UI/ErrorFallback.tsx";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <Provider store={store}>
-      <ErrorBoundary
-        FallbackComponent={ErrorFallback}
-        onReset={() => window.location.replace("/")}
-      >
+    <ErrorBoundary
+      FallbackComponent={ErrorFallback}
+      onReset={() => window.location.replace("/")}
+    >
+      <Provider store={store}>
         <App />
-      </ErrorBoundary>
-    </Provider>
+      </Provider>
+    </ErrorBoundary>
   </StrictMode>
 );
