@@ -68,10 +68,13 @@ function Window({ children, name }: WindowProps) {
     <>
       <div className="fixed top-0 left-0 w-full h-screen bg-black/50 dark:bg-zinc-600/50 z-50 blur-sm"></div>
       <div
-        className="fixed top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] bg-gray-100 rounded shadow z-60 px-12 py-6 lg:w-[750px] w-[90%] backdrop-blur-sm backdrop-filter supports-[backdrop-filter]:bg-background/60 dark:bg-zinc-900 shadow-indigo-900/50"
+        className="fixed top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] bg-gray-100 rounded shadow z-60 sm:px-12 py-6 px-4 lg:w-[750px] w-[90%] backdrop-blur-sm backdrop-filter supports-[backdrop-filter]:bg-background/60 dark:bg-zinc-900 shadow-indigo-900/50"
         ref={ref}
       >
-        <Button onClick={close} className="absolute top-6 right-1">
+        <Button
+          onClick={close}
+          className="absolute top-6 right-1 hidden sm:block"
+        >
           <HiXMark className="w-12 h-6" />
         </Button>
         <div className="">

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 // Icons
 import { WiStrongWind } from "react-icons/wi";
 import { WiHumidity } from "react-icons/wi";
@@ -23,7 +23,17 @@ const CityDetail: React.FC = () => {
     isLoading: loadingForecast,
     isError: errorForecast,
   } = useWeatherForecast(city || "");
-  const { addCity } = useAddCities();
+  const { addCity, cities } = useAddCities();
+  const [isCityAdded, setIsCityAdded] = useState(false);
+
+  useEffect(() => {
+    if (city && cities.includes(city)) {
+      setIsCityAdded(true);
+    } else {
+      setIsCityAdded(false);
+    }
+  }, [city, cities]);
+
   function handleAddCity() {
     if (!city) return;
     addCity(city || "");
@@ -33,14 +43,15 @@ const CityDetail: React.FC = () => {
   if (loadingWeather || loadingForecast) return <Spinner />;
   if (errorWeather || errorForecast)
     return <div>Error fetching data for {city}</div>;
-  console.log(currentWeather);
 
   return (
-    <div className="p-6">
-      <div className="lg:max-w-6xl mx-auto bg-gray-200 dark:bg-zinc-900 py-8 px-12 md:px-8 rounded-lg shadow dark:shadow-indigo-900/50 dark:text-gray-200">
+    <div className="md:p-6">
+      <div className="lg:max-w-6xl mx-auto bg-gray-200 dark:bg-zinc-900 py-8 lg:px-12 md:px-8 px-4 rounded-lg shadow dark:shadow-indigo-900/50 dark:text-gray-200">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
-            <h2 className="md:text-7xl text-4xl font-bold mb-4">{city}</h2>
+            <h2 className="lg:text-7xl sm:text-5xl text-xl font-bold mb-4">
+              {city}
+            </h2>
             <h3 className="text-xl font-semibold">Current Weather:</h3>
             <div className="flex items-center gap-4 mb-6">
               <p className="text-9xl font-black tracking-tight">
@@ -73,8 +84,13 @@ const CityDetail: React.FC = () => {
             <button
               onClick={handleAddCity}
               className="mt-6 bg-indigo-700 hover:bg-indigo-800 text-white py-2 px-4 rounded-md cursor-pointer"
+              disabled={isCityAdded}
             >
-              <span>Add {city} to Dashboard</span>
+              <span>
+                {isCityAdded
+                  ? `${city} is already on the dashboard`
+                  : `Add ${city} to Dashboard`}
+              </span>
             </button>
           </div>
           <div>

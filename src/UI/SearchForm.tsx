@@ -12,7 +12,7 @@ import { useNavigate } from "react-router";
 export default function SearchForm() {
   const [query, setQuery] = useState("");
   const navigate = useNavigate();
-  const { data: cities, error, isLoading: isSearching } = useSearch(query);
+  const { data: cities, isLoading: isSearching } = useSearch(query);
   const { closeModal } = useModal();
 
   const handleSearch = (city: { name: any }) => {
@@ -43,14 +43,14 @@ export default function SearchForm() {
         )}
         <div className="py-4 mt-4">
           {cities && cities.length > 0 && (
-            <SearchGroup heading=" Search Results">
+            <SearchGroup heading="Search Results">
               {isSearching && <Spinner />}
               {cities.map((city: any) => {
                 return (
                   <SearchItem key={city.id} onClick={() => handleSearch(city)}>
                     <p>{city.name},</p>
                     {city.region && (
-                      <span className="opacity-55 font-normal ml-1">
+                      <span className="opacity-55 font-normal ml-1 hidden sm:block">
                         {city.region},
                       </span>
                     )}

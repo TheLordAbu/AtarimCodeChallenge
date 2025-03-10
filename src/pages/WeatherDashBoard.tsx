@@ -10,7 +10,7 @@ const WeatherDashboard = () => {
   const curDate = new Date();
 
   return (
-    <div className="p-6">
+    <div className="md:p-6 p-2">
       <h1 className="text-4xl font-bold mb-4 md:w-8/12 dark:text-gray-200">
         Welcome to your Dashboard, {username}
       </h1>
