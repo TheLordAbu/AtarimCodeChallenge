@@ -15,7 +15,6 @@ export const fetchCurrentWeather = async (city: string) => {
   return res.json();
 };
 
-// Fetch 5-day forecast data for a city
 export const fetchWeatherForecast = async (city: string) => {
   const res = await fetch(
     `${API_CONFIG.BASE_URL}/forecast.json?key=${API_CONFIG.API_KEY}&q=${city}&days=5&aqi=no&alerts=no`
@@ -35,7 +34,7 @@ export const searchLocals = async (query: string) => {
   }
   return res.json();
 };
-// Fetch search result for a city (essentially, same as fetching current weather)
+
 export const searchCityWeather = async (city: string) => {
   return fetchCurrentWeather(city);
 };

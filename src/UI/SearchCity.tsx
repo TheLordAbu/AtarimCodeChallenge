@@ -2,7 +2,6 @@ import { useState } from "react";
 import { useSearchCityWeather } from "../hooks/useGetWeather";
 import { useModal } from "../context/ModalContext";
 
-// Update the type for `onCityAdd` to make it optional
 const SearchCity = ({ onCityAdd }: { onCityAdd?: (city: string) => void }) => {
   const { closeModal } = useModal();
   const [city, setCity] = useState("");
@@ -12,7 +11,7 @@ const SearchCity = ({ onCityAdd }: { onCityAdd?: (city: string) => void }) => {
     refetch();
     if (data) {
       if (onCityAdd) {
-        onCityAdd(city); // Call onCityAdd if it's provided
+        onCityAdd(city);
       }
       closeModal();
     }
