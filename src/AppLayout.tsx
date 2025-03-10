@@ -9,7 +9,7 @@ const AppLayout = () => {
     <div className="bg-gradient-to-r from-background to-muted bg-gray-300 dark:bg-zinc-800">
       <Modal>
         <Header />
-        <main className="min-h-screen container mx-auto px-4 py-8 mt-8">
+        <main className="min-h-screen lg:container mx-auto px-4 py-8 mt-8">
           <Outlet />
           <OpenSearch />
         </main>

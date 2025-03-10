@@ -45,7 +45,7 @@ function CityFutureForcast(day: any) {
           </div>
         </div>
         <div>
-          <h3 className="text-6xl font-extrabold">
+          <h3 className="lg:text-6xl text-3xl font-extrabold">
             {formatTemp(curDay.avgtemp_c)}
           </h3>
         </div>

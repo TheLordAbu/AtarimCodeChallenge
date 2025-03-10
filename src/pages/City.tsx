@@ -37,10 +37,10 @@ const CityDetail: React.FC = () => {
 
   return (
     <div className="p-6">
-      <div className="lg:max-w-6xl mx-auto bg-gray-200 dark:bg-zinc-900 py-8 px-12 rounded-lg shadow dark:shadow-indigo-900/50 dark:text-gray-200">
+      <div className="lg:max-w-6xl mx-auto bg-gray-200 dark:bg-zinc-900 py-8 px-12 md:px-8 rounded-lg shadow dark:shadow-indigo-900/50 dark:text-gray-200">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
-            <h2 className="text-7xl font-bold mb-4">{city}</h2>
+            <h2 className="md:text-7xl text-4xl font-bold mb-4">{city}</h2>
             <h3 className="text-xl font-semibold">Current Weather:</h3>
             <div className="flex items-center gap-4 mb-6">
               <p className="text-9xl font-black tracking-tight">
